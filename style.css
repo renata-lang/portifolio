@@ -1,0 +1,132 @@
+/* Limpa as margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configura o fundo, a cor do texto e a tipografia do Figma */
+body {
+    background-color: #f4f4f6; 
+    color: #111111;            
+    font-family: 'Inter', sans-serif; 
+    min-height: 100vh;         
+    padding: 40px 20px;        
+}
+
+/* Configura a barra do menu no topo */
+.menu-topo {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 50px auto; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+/* Organiza o espaçamento entre os links do menu */
+.menu-topo nav {
+    display: flex;
+    gap: 15px; 
+}
+
+/* Estilo dos botões do menu */
+.link-menu {
+    display: inline-block;
+    color: #8B0092;            
+    border: 2px solid #8B0092; 
+    background-color: transparent; 
+    text-decoration: none;     
+    padding: 8px 16px;         
+    border-radius: 6px;        
+    font-weight: 700;          
+    font-size: 14px;
+    transition: all 0.2s ease; 
+}
+
+/* Efeito quando passa o mouse */
+.link-menu:hover {
+    background-color: #8B0092; 
+    color: #ffffff;            
+}
+
+/* Configura o seu Nome (Título Principal) */
+.nome-topo {
+    text-align: center;       
+    font-size: 32px;          
+    font-weight: 700;         
+    margin-bottom: 30px;      
+}
+
+/* Organiza o conteúdo do meio em duas colunas */
+.conteudo-meio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;                
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+/* Controla o tamanho máximo do lado esquerdo (Foto e Cargo) */
+.bloco-esquerda {
+    width: 400px;             
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Controla o formato da sua foto de perfil */
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;       
+    object-fit: cover;
+}
+
+/* Configura o seu Cargo */
+.bloco-esquerda h2 {
+    font-size: 16px;          
+    font-weight: 400;         
+    color: #4a4a4a;            
+    margin-top: 15px;         
+}
+
+/* Ajusta o Bloco da Direita (Sua Frase de Impacto) */
+.bloco-direita {
+    flex: 1;                  
+}
+
+.descricao {
+    font-size: 20px;          
+    line-height: 1.6;         
+    font-style: italic;       
+}
+
+/* Espaçamento para jogar as competências mais abaixo do cargo */
+.competencias-secao {
+    margin-top: 40px;         
+    display: flex;
+    flex-direction: column;   
+    gap: 12px;                
+    align-items: center;      
+}
+
+/* Configura cada uma das duas linhas para ter dois itens lado a lado */
+.linha-competencia {
+    display: flex;
+    gap: 15px;                
+    justify-content: center;  
+    width: 100%;
+}
+
+/* Estilo das competências na cor roxa do Figma */
+.texto-competencia {
+    font-size: 14px;
+    font-weight: 500;         
+    color: #ffffff;           
+    background-color: #8B0092;
+    padding: 8px 14px;        
+    border-radius: 6px;       
+    text-align: center;
+    min-width: 180px;         
+}
+

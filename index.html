@@ -1,59 +1,669 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Meu Portfólio - Quéren Renata</title>
 
-    <!-- Links oficiais corrigidos da Fonte Inter do Google -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Conexão com o seu arquivo de estilos style.css -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- ABA DO TOPO COM OS SEUS LINKS REAIS -->
+    <!-- MENU DO TOPO -->
     <header class="menu-topo">
         <nav>
-            <a href="#inicio" class="link-menu">Meu Portfólio</a>
-            <a href="https://linkedin.com" target="_blank" class="link-menu">LinkedIn</a>
-            <a href="https://wa.me" target="_blank" class="link-menu">WhatsApp</a>
-            <a href="https://github.com" target="_blank" class="link-menu">GitHub</a>
-            <a href="#" target="_blank" class="link-menu">Projeto em SQL</a>
-            <a href="#" target="_blank" class="link-menu">Projeto em JAVA</a>
+            <a href="https://www.linkedin.com/in/renata-hugentobler-b5b061316/"
+               target="_blank"
+               class="link-menu">
+                LinkedIn
+            </a>
+
+            <a href="https://wa.me/5551980549396"
+               target="_blank"
+               class="link-menu">
+                WhatsApp
+            </a>
+
+            <a href="https://github.com/renata-lang"
+               target="_blank"
+               class="link-menu">
+                GitHub
+            </a>
         </nav>
     </header>
 
-    <main id="inicio">
-        <section class="principal">
-            
-            <!-- Nome Centralizado -->
-            <h1 class="nome-topo">Quéren Renata G. R. Hugentobler</h1>
-            
-            <!-- Caixa que segura o Lado Esquerdo e o Lado Direito juntos -->
-            <div class="conteudo-meio">
-                
-                <!-- LADO ESQUERDO: Foto, Cargo e Competências abaixo -->
-                <div class="bloco-esquerda">
-                    <img src="minha-foto.png" alt="Foto de Quéren Renata" class="foto-perfil">
-                    <h2>Estudante de Gestão de Recursos Humanos</h2>
-                    
-                  
-                
-                <!-- LADO DIREITO: Frase de Impacto -->
-                <div class="bloco-direita">
-                    <p class="descricao">
-                        “Entusiasta da tecnologia aplicada à gestão de pessoas. Busco desenvolver soluções eficientes em RH combinando organização, administração e inovação digital.”
-                    </p>
+    <main>
+
+        <!-- INÍCIO -->
+        <section class="hero" id="inicio">
+
+            <div class="forma-fundo"></div>
+
+            <div class="hero-conteudo">
+
+                <div class="foto-container">
+                    <img src="minha-foto.png"
+                         alt="Foto de Quéren Renata"
+                         class="foto-perfil">
                 </div>
-                
+
+                <p class="pequeno-titulo">
+                    ESTUDANTE DE GESTÃO DE RECURSOS HUMANOS
+                </p>
+
+                <h1>
+                    Quéren Renata G. R. Hugentobler
+                </h1>
+
+                <p class="frase-destaque">
+                    Tecnologia, organização e pessoas caminhando juntas.
+                </p>
+
+                <p class="descricao-topo">
+                    Entusiasta da tecnologia aplicada à gestão de pessoas.
+                    Busco desenvolver soluções eficientes em RH combinando
+                    organização, administração e inovação digital.
+                </p>
+
             </div>
 
         </section>
+
+
+        <!-- SOBRE MIM -->
+        <section id="sobre" class="secao">
+
+            <div class="titulo-secao">
+
+                <span class="numero-secao">
+                    01
+                </span>
+
+                <div>
+                    <h2>Sobre Mim</h2>
+
+                    <p>
+                        Conheça um pouco da minha trajetória
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="card-sobre">
+
+                <div class="icone-secao">
+                    ✦
+                </div>
+
+                <p>
+                    Olá! Eu sou a Renata.
+                </p>
+
+                <p>
+                    Sou estudante de Gestão de Recursos Humanos no UNASP
+                    e estou em constante desenvolvimento profissional,
+                    buscando unir meus conhecimentos de gestão de pessoas,
+                    administração e tecnologia.
+                </p>
+
+                <p>
+                    Tenho formação em Informática Básica e estou ampliando
+                    meus conhecimentos na área de Tecnologia e Desenvolvimento
+                    Full Stack, aprendendo sobre ferramentas, sistemas
+                    e soluções digitais.
+                </p>
+
+                <p>
+                    Sou uma pessoa responsável, organizada, dedicada e curiosa.
+                    Gosto de aprender coisas novas e busco sempre desenvolver
+                    minhas habilidades.
+                </p>
+
+                <p>
+                    Meu objetivo é conquistar uma oportunidade profissional
+                    onde eu possa colocar meus conhecimentos em prática,
+                    desenvolver novas competências e contribuir de forma
+                    positiva para a equipe e para a empresa.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMAÇÃO -->
+        <section id="formacao" class="secao secao-bege">
+
+            <div class="titulo-secao">
+
+                <span class="numero-secao">
+                    02
+                </span>
+
+                <div>
+                    <h2>Formação</h2>
+
+                    <p>
+                        Minha jornada de aprendizado
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="grid-formacao">
+
+                <div class="card-formacao">
+
+                    <div class="icone-card">
+                        🎓
+                    </div>
+
+                    <span class="etiqueta">
+                        EM ANDAMENTO
+                    </span>
+
+                    <h3>
+                        Tecnologia em Gestão de Recursos Humanos
+                    </h3>
+
+                    <p class="instituicao">
+                        UNASP-EAD
+                    </p>
+
+                    <p>
+                        Curso superior voltado à gestão de pessoas,
+                        desenvolvimento profissional e práticas de
+                        Recursos Humanos.
+                    </p>
+
+                </div>
+
+
+                <div class="card-formacao">
+
+                    <div class="icone-card">
+                        📋
+                    </div>
+
+                    <span class="etiqueta">
+                        CONCLUÍDO
+                    </span>
+
+                    <h3>
+                        Administração
+                    </h3>
+
+                    <p class="instituicao">
+                        Prepara Cursos Profissionalizantes
+                    </p>
+
+                    <p>
+                        Formação complementar com conhecimentos em
+                        administração e rotinas administrativas.
+                    </p>
+
+                </div>
+
+
+                <div class="card-formacao">
+
+                    <div class="icone-card">
+                        💻
+                    </div>
+
+                    <span class="etiqueta">
+                        EM ANDAMENTO
+                    </span>
+
+                    <h3>
+                        Curso Full Stack 5.0
+                    </h3>
+
+                    <p class="instituicao">
+                        Formação voltada ao desenvolvimento e à tecnologia
+                    </p>
+
+                    <p>
+                        Formação em desenvolvimento de sistemas,
+                        com conhecimentos em programação, banco de dados
+                        e desenvolvimento web.
+                    </p>
+
+                </div>
+
+
+                <div class="card-formacao">
+
+                    <div class="icone-card">
+                        🖥️
+                    </div>
+
+                    <span class="etiqueta">
+                        CONCLUÍDO
+                    </span>
+
+                    <h3>
+                        Curso de Informática Básica
+                    </h3>
+
+                    <p class="instituicao">
+                        Pacote Office (Word, Excel e PowerPoint)
+                    </p>
+
+                    <p>
+                        Formação em informática e ferramentas digitais,
+                        incluindo conhecimentos de Word, Excel e PowerPoint.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPERIÊNCIA PROFISSIONAL -->
+        <section id="experiencia" class="secao">
+
+            <div class="titulo-secao">
+
+                <span class="numero-secao">
+                    03
+                </span>
+
+                <div>
+                    <h2>Experiência Profissional</h2>
+
+                    <p>
+                        Minha trajetória profissional
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="linha-tempo">
+
+                <div class="item-linha">
+
+                    <div class="ponto-linha"></div>
+
+                    <div class="card-experiencia">
+
+                        <span class="numero-experiencia">
+                            01
+                        </span>
+
+                        <h3>
+                            UnidaSul Distribuidora Alimentícia S.A.
+                        </h3>
+
+                        <p class="cidade">
+                            Filial 68 - Esteio-RS
+                        </p>
+
+                        <p class="cargo">
+                            Auxiliar de Operação Logística
+                        </p>
+
+                        <p>
+                            Contato com rotinas operacionais,
+                            organização e movimentação de materiais.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="item-linha">
+
+                    <div class="ponto-linha"></div>
+
+                    <div class="card-experiencia">
+
+                        <span class="numero-experiencia">
+                            02
+                        </span>
+
+                        <h3>
+                            Alsco Toalheiro Ltda
+                        </h3>
+
+                        <p class="cidade">
+                            Canoas-RS
+                        </p>
+
+                        <p class="cargo">
+                            Auxiliar de Produção
+                        </p>
+
+                        <p>
+                            Desenvolvendo atividades relacionadas à rotina
+                            operacional, organização e trabalho em equipe.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="item-linha">
+
+                    <div class="ponto-linha"></div>
+
+                    <div class="card-experiencia">
+
+                        <span class="numero-experiencia">
+                            03
+                        </span>
+
+                        <h3>
+                            JAN SS Supermercados Ltda
+                        </h3>
+
+                        <p class="cidade">
+                            Três Coroas
+                        </p>
+
+                        <p class="cargo">
+                            Operador(a) de Loja
+                        </p>
+
+                        <p>
+                            Experiência com atendimento ao cliente e
+                            operação de caixa, desenvolvendo responsabilidade,
+                            organização e atenção durante as atividades.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HABILIDADES -->
+        <section id="habilidades-gerais" class="secao secao-bege">
+
+            <div class="titulo-secao">
+
+                <span class="numero-secao">
+                    04
+                </span>
+
+                <div>
+                    <h2>Habilidades e Conhecimentos</h2>
+
+                    <p>
+                        Competências que estou desenvolvendo
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="habilidades-grid">
+
+                <div class="card-habilidades">
+
+                    <div class="icone-habilidade">
+                        ★
+                    </div>
+
+                    <h3>
+                        Competências Profissionais
+                    </h3>
+
+                    <div class="tags">
+
+                        <span>Organização</span>
+                        <span>Responsabilidade</span>
+                        <span>Comunicação</span>
+                        <span>Trabalho em equipe</span>
+                        <span>Atendimento ao cliente</span>
+                        <span>Proatividade</span>
+                        <span>Comprometimento</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-habilidades">
+
+                    <div class="icone-habilidade">
+                        &lt;/&gt;
+                    </div>
+
+                    <h3>
+                        Conhecimentos Técnicos
+                    </h3>
+
+                    <div class="tags">
+
+                        <span>Informática</span>
+                        <span>Ferramentas digitais</span>
+                        <span>Figma</span>
+                        <span>GitHub</span>
+                        <span>PostgreSQL</span>
+                        <span>Desenvolvimento Full Stack</span>
+                        <span>Rotinas administrativas</span>
+                        <span>Gestão de Recursos Humanos</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </sec
+                </section>
+
+
+        <!-- PROJETOS -->
+        <section id="projetos-vitrine" class="secao">
+
+            <div class="titulo-secao">
+
+                <span class="numero-secao">
+                    05
+                </span>
+
+                <div>
+                    <h2>Meus Projetos</h2>
+
+                    <p>
+                        Projetos desenvolvidos durante minha formação
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="projetos-grid">
+
+                <!-- PROJETO SQL -->
+                <div class="card-projeto-novo">
+
+                    <div class="topo-projeto">
+
+                        <div class="icone-projeto">
+                            DB
+                        </div>
+
+                        <span>
+                            SQL
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Projeto em SQL
+                    </h3>
+
+                    <p>
+                        Desenvolvimento de um banco de dados estruturado
+                        para um desafio de organização financeira e redução
+                        de gastos pessoais.
+                    </p>
+
+                    <p>
+                        O projeto iniciou com o mapeamento de despesas e
+                        cuidados diários de uma tutora de gato no Google
+                        Planilhas e avançou para a implementação prática
+                        no PostgreSQL.
+                    </p>
+
+                    <div class="tecnologias">
+
+                        <span>PostgreSQL</span>
+                        <span>Banco de Dados</span>
+                        <span>SQL</span>
+
+                    </div>
+
+                    <a href="https://onedrive.live.com/:p:/g/personal/5CFC6A50F2BE2D8B/IQB4Vu2MOTSURbmQX7v2JdsBAaoRryBX0npb5-gzBpZ2DSY?resid=5CFC6A50F2BE2D8B!s8ced567834394594b9905fbbf625db01&ithint=file%2Cpptx&e=XPWUlG&nav=eyJzSWQiOjI1NiwiY0lkIjoyMjEwODY2NTUxfQ&migratedtospo=true"
+                       target="_blank"
+                       class="botao-projeto">
+
+                        Visualizar Projeto
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- PROJETO JAVA -->
+                <div class="card-projeto-novo">
+
+                    <div class="topo-projeto">
+
+                        <div class="icone-projeto">
+                            ☕
+                        </div>
+
+                        <span>
+                            JAVA
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Projeto em JAVA
+                    </h3>
+
+                    <p>
+                        Desenvolvimento de uma aplicação robusta em Java
+                        utilizando a IDE IntelliJ IDEA para um desafio
+                        focado na prevenção e combate a golpes digitais.
+                    </p>
+
+                    <p>
+                        O sistema utiliza conceitos de programação orientada
+                        a objetos para analisar padrões suspeitos, validar
+                        integridade de dados e automatizar mecanismos de
+                        segurança.
+                    </p>
+
+                    <div class="tecnologias">
+
+                        <span>Java</span>
+                        <span>POO</span>
+                        <span>IntelliJ IDEA</span>
+
+                    </div>
+
+                    <a href="https://github.com/FlaviaFigueiredo86/Detector-de-Fraudes-Completo"
+                       target="_blank"
+                       class="botao-projeto">
+
+                        Visualizar Projeto
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        <!-- MENSAGEM FINAL -->
+        <section class="secao-contato">
+
+            <div class="contato-conteudo">
+
+                <span>
+                    VAMOS NOS CONECTAR?
+                </span>
+
+                <h2>
+                    Obrigada por visitar<br>
+                    meu portfólio.
+                </h2>
+
+                <p>
+                    Estou em constante aprendizado e aberta a novas
+                    oportunidades profissionais.
+                </p>
+
+                <div class="links-contato">
+
+                    <a href="https://www.linkedin.com/in/renata-hugentobler-b5b061316/"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://wa.me/5551980549396"
+                       target="_blank">
+                        WhatsApp
+                    </a>
+
+                    <a href="https://github.com/renata-lang"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>
+            © 2026 Quéren Renata G. R. Hugentobler
+        </p>
+
+        <p>
+            Desenvolvido durante minha jornada Full Stack
+        </p>
+
+    </footer>
+
 </body>
+
 </html>
+```

@@ -1,132 +1,1043 @@
-/* Limpa as margens padrão do navegador */
+/* ==========================================================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Configura o fundo, a cor do texto e a tipografia do Figma */
-body {
-    background-color: #f4f4f6; 
-    color: #111111;            
-    font-family: 'Inter', sans-serif; 
-    min-height: 100vh;         
-    padding: 40px 20px;        
+html {
+    scroll-behavior: smooth;
 }
 
-/* Configura a barra do menu no topo */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f4f4f7;
+    color: #292631;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ==========================================================================
+   2. MENU DO TOPO
+   ========================================================================== */
+
 .menu-topo {
     width: 100%;
-    max-width: 900px;
-    margin: 0 auto 50px auto; 
-    display: flex;
-    justify-content: flex-end; 
+    padding: 22px 7%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e7e4eb;
+    position: relative;
+    z-index: 10;
 }
 
-/* Organiza o espaçamento entre os links do menu */
 .menu-topo nav {
-    display: flex;
-    gap: 15px; 
-}
+    max-width: 1200px;
+    margin: 0 auto;
 
-/* Estilo dos botões do menu */
-.link-menu {
-    display: inline-block;
-    color: #8B0092;            
-    border: 2px solid #8B0092; 
-    background-color: transparent; 
-    text-decoration: none;     
-    padding: 8px 16px;         
-    border-radius: 6px;        
-    font-weight: 700;          
-    font-size: 14px;
-    transition: all 0.2s ease; 
-}
-
-/* Efeito quando passa o mouse */
-.link-menu:hover {
-    background-color: #8B0092; 
-    color: #ffffff;            
-}
-
-/* Configura o seu Nome (Título Principal) */
-.nome-topo {
-    text-align: center;       
-    font-size: 32px;          
-    font-weight: 700;         
-    margin-bottom: 30px;      
-}
-
-/* Organiza o conteúdo do meio em duas colunas */
-.conteudo-meio {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;                
-    max-width: 900px;
-    margin: 0 auto 40px auto;
+
+    gap: 42px;
 }
 
-/* Controla o tamanho máximo do lado esquerdo (Foto e Cargo) */
-.bloco-esquerda {
-    width: 400px;             
-    text-align: center;
-    flex-shrink: 0;
-}
-
-/* Controla o formato da sua foto de perfil */
-.foto-perfil {
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;       
-    object-fit: cover;
-}
-
-/* Configura o seu Cargo */
-.bloco-esquerda h2 {
-    font-size: 16px;          
-    font-weight: 400;         
-    color: #4a4a4a;            
-    margin-top: 15px;         
-}
-
-/* Ajusta o Bloco da Direita (Sua Frase de Impacto) */
-.bloco-direita {
-    flex: 1;                  
-}
-
-.descricao {
-    font-size: 20px;          
-    line-height: 1.6;         
-    font-style: italic;       
-}
-
-/* Espaçamento para jogar as competências mais abaixo do cargo */
-.competencias-secao {
-    margin-top: 40px;         
-    display: flex;
-    flex-direction: column;   
-    gap: 12px;                
-    align-items: center;      
-}
-
-/* Configura cada uma das duas linhas para ter dois itens lado a lado */
-.linha-competencia {
-    display: flex;
-    gap: 15px;                
-    justify-content: center;  
-    width: 100%;
-}
-
-/* Estilo das competências na cor roxa do Figma */
-.texto-competencia {
+.link-menu {
+    color: #51485f;
     font-size: 14px;
-    font-weight: 500;         
-    color: #ffffff;           
-    background-color: #8B0092;
-    padding: 8px 14px;        
-    border-radius: 6px;       
-    text-align: center;
-    min-width: 180px;         
+    font-weight: 600;
+
+    transition: 0.3s ease;
 }
 
+.link-menu:hover {
+    color: #8064a8;
+}
+
+
+/* ==========================================================================
+   3. ÁREA PRINCIPAL / HERO
+   ========================================================================== */
+
+.hero {
+    min-height: 650px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 7%;
+
+    background-color: #eeeeF3;
+}
+
+
+/* FORMAS REDONDAS ATRÁS DA FOTO */
+
+.forma-fundo {
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    border-radius: 50%;
+
+    background-color: #d9c9e9;
+
+    right: -130px;
+    top: -120px;
+
+    opacity: 0.65;
+}
+
+
+/* Segunda forma decorativa */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    background-color: #c8b3df;
+
+    left: -80px;
+    bottom: -90px;
+
+    opacity: 0.45;
+}
+
+
+/* Terceira forma menor atrás da foto */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background-color: #b99bd3;
+
+    left: calc(50% - 310px);
+    top: 145px;
+
+    opacity: 0.25;
+}
+
+
+.hero-conteudo {
+    width: 100%;
+    max-width: 950px;
+
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+}
+
+
+/* ==========================================================================
+   4. FOTO DE PERFIL
+   ========================================================================== */
+
+.foto-container {
+    width: 165px;
+    height: 165px;
+
+    margin: 0 auto 28px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 6px solid #ffffff;
+
+    box-shadow:
+        0 12px 35px rgba(82, 63, 100, 0.18);
+
+    background-color: #ddd;
+
+    position: relative;
+    z-index: 3;
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ==========================================================================
+   5. TEXTOS DO TOPO
+   ========================================================================== */
+
+.pequeno-titulo {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    color: #8064a8;
+
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 62px);
+
+    line-height: 1.1;
+
+    color: #292631;
+
+    margin-bottom: 20px;
+
+    font-weight: 700;
+}
+
+.frase-destaque {
+    font-size: 21px;
+
+    color: #8064a8;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+.descricao-topo {
+    max-width: 690px;
+
+    margin: 0 auto;
+
+    color: #68636e;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================================================
+   6. SEÇÕES
+   ========================================================================== */
+
+.secao {
+    padding: 100px 7%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+.secao-bege {
+    max-width: none;
+
+    background-color: #e9e4ee;
+}
+
+.secao-bege > * {
+    max-width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* TÍTULOS DAS SEÇÕES */
+
+.titulo-secao {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 22px;
+
+    margin-bottom: 55px;
+}
+
+.numero-secao {
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #8d70ad;
+
+    padding-top: 8px;
+}
+
+.titulo-secao h2 {
+    font-size: clamp(30px, 4vw, 44px);
+
+    line-height: 1.1;
+
+    margin-bottom: 10px;
+
+    color: #302b37;
+}
+
+.titulo-secao p {
+    color: #77727c;
+
+    font-size: 15px;
+}
+
+
+/* ==========================================================================
+   7. SOBRE MIM
+   ========================================================================== */
+
+.card-sobre {
+    max-width: 900px;
+
+    background-color: #ffffff;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(63, 48, 77, 0.07);
+
+    border: 1px solid #e6e1eb;
+}
+
+.icone-secao {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    background-color: #e6dcf0;
+
+    color: #8064a8;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    margin-bottom: 25px;
+}
+
+.card-sobre p {
+    color: #626069;
+
+    font-size: 16px;
+
+    margin-bottom: 17px;
+}
+
+.card-sobre p:first-of-type {
+    color: #302b37;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+.card-sobre p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   8. FORMAÇÃO
+   ========================================================================== */
+
+.grid-formacao {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.card-formacao {
+    background-color: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 32px;
+
+    border: 1px solid #ded8e5;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-formacao:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(65, 48, 80, 0.10);
+}
+
+.icone-card {
+    font-size: 30px;
+
+    margin-bottom: 18px;
+}
+
+.etiqueta {
+    display: inline-block;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background-color: #e7dcef;
+
+    color: #765d95;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+.card-formacao h3 {
+    font-size: 21px;
+
+    line-height: 1.3;
+
+    margin-bottom: 9px;
+
+    color: #302b37;
+}
+
+.instituicao {
+    color: #8064a8;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.card-formacao > p:last-child {
+    color: #66616b;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================================
+   9. EXPERIÊNCIA PROFISSIONAL
+   ========================================================================== */
+
+.linha-tempo {
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.linha-tempo::before {
+    content: "";
+
+    position: absolute;
+
+    left: 13px;
+
+    top: 10px;
+
+    bottom: 10px;
+
+    width: 2px;
+
+    background-color: #cdbbdd;
+}
+
+.item-linha {
+    position: relative;
+
+    padding-left: 55px;
+
+    margin-bottom: 35px;
+}
+
+.item-linha:last-child {
+    margin-bottom: 0;
+}
+
+.ponto-linha {
+    position: absolute;
+
+    left: 5px;
+
+    top: 28px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background-color: #8d70ad;
+
+    border: 4px solid #f4f4f7;
+
+    z-index: 2;
+}
+
+.card-experiencia {
+    background-color: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 32px;
+
+    border: 1px solid #e6e1eb;
+
+    position: relative;
+
+    box-shadow:
+        0 8px 25px rgba(63, 48, 77, 0.05);
+}
+
+.numero-experiencia {
+    position: absolute;
+
+    top: 22px;
+    right: 25px;
+
+    color: #b9a8c9;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.card-experiencia h3 {
+    font-size: 21px;
+
+    margin-bottom: 4px;
+
+    padding-right: 40px;
+}
+
+.cidade {
+    color: #88838d;
+
+    font-size: 13px;
+
+    margin-bottom: 13px;
+}
+
+.cargo {
+    color: #8064a8;
+
+    font-weight: 700;
+
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+.card-experiencia > p:last-child {
+    color: #66616b;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================================
+   10. HABILIDADES
+   ========================================================================== */
+
+.habilidades-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.card-habilidades {
+    background-color: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    border: 1px solid #ded8e5;
+}
+
+.icone-habilidade {
+    font-size: 25px;
+
+    color: #8064a8;
+
+    margin-bottom: 18px;
+}
+
+.card-habilidades h3 {
+    font-size: 21px;
+
+    margin-bottom: 22px;
+}
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.tags span,
+.tecnologias span {
+    display: inline-block;
+
+    padding: 8px 12px;
+
+    border-radius: 30px;
+
+    background-color: #ebe5f0;
+
+    color: #665275;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================================
+   11. PROJETOS
+   ========================================================================== */
+
+.projetos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px;
+}
+
+.card-projeto-novo {
+    background-color: #ffffff;
+
+    border: 1px solid #e5e0e9;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-projeto-novo:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(63, 48, 77, 0.09);
+}
+
+.topo-projeto {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.icone-projeto {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    background-color: #e5daed;
+
+    color: #765d95;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+}
+
+.topo-projeto > span {
+    color: #8d70ad;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.card-projeto-novo h3 {
+    font-size: 25px;
+
+    margin-bottom: 18px;
+}
+
+.card-projeto-novo p {
+    color: #66616b;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.tecnologias {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 10px;
+
+    margin-bottom: 28px;
+}
+
+.botao-projeto {
+    margin-top: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 14px 17px;
+
+    border-radius: 10px;
+
+    background-color: #765d95;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.botao-projeto:hover {
+    background-color: #5f4878;
+}
+
+.botao-projeto span {
+    font-size: 19px;
+}
+
+
+/* ==========================================================================
+   12. CONTATO
+   ========================================================================== */
+
+.secao-contato {
+    background-color: #403748;
+
+    color: #ffffff;
+
+    padding: 100px 7%;
+
+    text-align: center;
+}
+
+.contato-conteudo {
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+.contato-conteudo > span {
+    color: #cbb8dc;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+.contato-conteudo h2 {
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.15;
+
+    margin: 20px 0;
+}
+
+.contato-conteudo > p {
+    color: #d4ced9;
+
+    margin-bottom: 35px;
+}
+
+.links-contato {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.links-contato a {
+    border: 1px solid #82768c;
+
+    padding: 11px 20px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.links-contato a:hover {
+    background-color: #ffffff;
+
+    color: #403748;
+}
+
+
+/* ==========================================================================
+   13. RODAPÉ
+   ========================================================================== */
+
+footer {
+    background-color: #2f2935;
+
+    color: #aaa3b0;
+
+    padding: 25px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================================
+   14. RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 800px) {
+
+    .menu-topo nav {
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 65px 6%;
+    }
+
+    .foto-container {
+        width: 140px;
+        height: 140px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .frase-destaque {
+        font-size: 18px;
+    }
+
+    .grid-formacao,
+    .habilidades-grid,
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .secao {
+        padding: 75px 6%;
+    }
+
+    .card-sobre,
+    .card-formacao,
+    .card-habilidades,
+    .card-projeto-novo {
+        padding: 28px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .menu-topo {
+        padding: 18px 5%;
+    }
+
+    .menu-topo nav {
+        gap: 14px;
+    }
+
+    .link-menu {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .foto-container {
+        width: 125px;
+        height: 125px;
+    }
+
+    .pequeno-titulo {
+        font-size: 10px;
+
+        letter-spacing: 1.3px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .descricao-topo {
+        font-size: 14px;
+    }
+
+    .titulo-secao {
+        gap: 14px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 30px;
+    }
+
+    .card-sobre {
+        padding: 25px;
+    }
+
+    .item-linha {
+        padding-left: 40px;
+    }
+
+    .card-experiencia {
+        padding: 25px 20px;
+    }
+
+    .numero-experiencia {
+        display: none;
+    }
+
+    .card-projeto-novo {
+        padding: 25px;
+    }
+
+    .contato-conteudo h2 {
+        font-size: 35px;
+    }
+}
+
+
+
+
+
+
+/* ==========================================================================
+   SEÇÃO FINAL DE CONTATO
+   ========================================================================== */
+
+.secao-contato {
+    background-color: #403748;
+    color: #ffffff;
+    padding: 150px 7%;
+    margin-top: 60px;
+    text-align: center;
+
+}
+
+.contato-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contato-conteudo > span {
+    color: #cbb8dc;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.contato-conteudo h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.contato-conteudo > p {
+    color: #d4ced9;
+    margin-bottom: 35px;
+}
+
+.links-contato {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.links-contato a {
+    border: 1px solid #82768c;
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.links-contato a:hover {
+    background-color: #ffffff;
+    color: #403748;
+}
